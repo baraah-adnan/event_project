@@ -1,3 +1,37 @@
-<!--Moh jamal  -->
-<p>baraah adnan aljamous</p>
-<h1>The product owner: Mohammad J</h1>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      localStorage.clear();
+      let Event = [
+        {
+          ID_Event: 1,
+          Name: "test",
+          Image: "test",
+          Date: "test",
+          Description: "test",
+          Location: "test",
+        },
+      ];
+      let Admin = [
+        {
+          ID_Admin: 1,
+          Name: "test",
+          Email: "test",
+          Password: "test",
+        },
+      ];
+      localStorage.setItem("Event", JSON.stringify(Event));
+      localStorage.setItem("Admin", JSON.stringify(Admin));
+      let json = JSON.parse(localStorage.getItem("Event"));
+      json.forEach((element) => {
+        console.log(element.Name);
+      });
+    </script>
+  </body>
+</html>
