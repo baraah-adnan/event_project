@@ -7,30 +7,30 @@
   </head>
   <body>
     <script>
-      localStorage.clear();
+      // localStorage.clear();
       let Event = [
         {
           ID_Event: 1,
-          Name: "test",
-          Image: "test",
-          Date: "test",
-          Description: "test",
-          Location: "test",
+          title: "test",
+          img: "test",
+          date: "test",
+          desc: "test",
+          location: "test",
         },
       ];
       let Admin = [
         {
           ID_Admin: 1,
-          Name: "test",
-          Email: "test",
-          Password: "test",
+          name: "test",
+          email: "test",
+          password: "test",
         },
       ];
       localStorage.setItem("Event", JSON.stringify(Event));
       localStorage.setItem("Admin", JSON.stringify(Admin));
       let json = JSON.parse(localStorage.getItem("Event"));
       json.forEach((element) => {
-        console.log(element.Name);
+        console.log(element.title);
       });
     </script>
   </body>
